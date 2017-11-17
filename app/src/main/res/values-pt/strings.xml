@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">Configurações</string>
+    <string name="enter_message">Digite a mensagem</string>
+    <string name="buton_calc">Calcular</string>
+    <string name="insert_value">Insira o valor</string>
+    <string name="title_proportions">Proporções</string>
+    <string name="exec_one_empty_field">Deve haver um ou nenhum campo vázio</string>
+    <string name="proportion_failed">Todos os campos estão preenchidos, a proporção está errada. \nLimpe um campo e clique em Calcular</string>
+    <string name="proportion_ok">Todos os campos estão preenchidos, a proporção está correta</string>
+
+    <string name="ActName_Proportion">Regra de 3</string>
+    <string name="ActName_PregCalendar">Calendário de Gestação</string>
+</resources>

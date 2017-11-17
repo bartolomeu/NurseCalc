@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.net.bart.nursecalc.MainActivity">
+
+    <Button
+        android:id="@+id/ButtonProp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/my_margin_default"
+
+        android:drawableTop="@mipmap/ic_compare"
+        android:onClick="openProportionAct"
+        android:text="@string/ActName_Proportion"
+        app:layout_constraintEnd_toStartOf="@+id/ButtonPreg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ButtonPreg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/my_margin_default"
+        android:layout_marginStart="@dimen/my_margin_half"
+        android:layout_marginLeft="@dimen/my_margin_half"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ButtonProp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableTop="@mipmap/ic_pregnant"
+        android:text="@string/ActName_PregCalendar"/>
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonProp"
+        app:srcCompat="@mipmap/ic_compare" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/ButtonPreg"
+        app:srcCompat="@mipmap/ic_pregnant" />
+
+</android.support.constraint.ConstraintLayout>

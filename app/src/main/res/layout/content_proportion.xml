@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.net.bart.nursecalc.ProportionActivity"
+    tools:showIn="@layout/activity_proportion">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="@dimen/min_height_main"
+        android:layout_margin="@dimen/my_margin_default"
+        android:weightSum="17">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TIL1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            app:errorEnabled="true" >
+
+            <EditText
+                android:id="@+id/ETProp1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/insert_value"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/textSeparator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/my_margin_default_more_half"
+            android:layout_weight="1"
+            android:text="@string/separator"
+            android:textAlignment="center" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TIL2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            app:errorEnabled="true" >
+
+            <EditText
+                android:id="@+id/ETProp2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/insert_value"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="@dimen/min_height_main"
+        android:layout_margin="@dimen/my_margin_default"
+        android:weightSum="17"
+        app:layout_constraintTop_toBottomOf="@id/ll1"
+        >
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TIL3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            app:errorEnabled="true" >
+
+            <EditText
+                android:id="@+id/ETProp3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/insert_value"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textSeparator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/my_margin_default_more_half"
+            android:text="@string/separator"
+            android:textAlignment="center" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TIL4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            app:errorEnabled="true" >
+
+            <EditText
+                android:id="@+id/ETProp4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/insert_value"
+                android:inputType="numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/my_margin_default"
+        android:onClick="calculate"
+        android:text="@string/buton_calc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/TVErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/my_margin_default"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
