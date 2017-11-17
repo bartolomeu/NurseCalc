@@ -23,12 +23,12 @@ public class ProportionActivityTest {
     //checkProportion()
     @Test
     public void checkProportion_integers() throws Exception {
-        assertEquals(true, proportionActivity.checkProportion(1, 2, 3, 6));
+        assertEquals(true, proportionActivity.checkProportion(1f, 2f, 3f, 6f));
     }
 
     @Test
     public void checkProportion_integersWrong() throws Exception {
-        assertEquals(false, proportionActivity.checkProportion(1, 2, 3, 5));
+        assertEquals(false, proportionActivity.checkProportion(1f, 2f, 3f, 5f));
     }
 
     @Test
@@ -38,21 +38,21 @@ public class ProportionActivityTest {
 
     @Test
     public void checkProportion_fristZero() throws Exception {
-        assertEquals("Validação com 0 no 1° campo", false, proportionActivity.checkProportion(0, 2, 3, 6));
+        assertEquals("Validação com 0 no 1° campo", false, proportionActivity.checkProportion(0f, 2f, 3f, 6f));
     }
 
     @Test
     public void checkProportion_secondZero() throws Exception {
-        assertEquals("Validação com 0 no 2° campo", false, proportionActivity.checkProportion(1, 0, 3, 6));
+        assertEquals("Validação com 0 no 2° campo", false, proportionActivity.checkProportion(1f, 0f, 3f, 6f));
     }
 
     @Test
     public void checkProportion_thirdZero() throws Exception {
-        assertEquals("Validação com 0 no 3° campo", false, proportionActivity.checkProportion(1, 2, 0, 6));
+        assertEquals("Validação com 0 no 3° campo", false, proportionActivity.checkProportion(1f, 2f, 0f, 6f));
     }
 
     @Test
     public void checkProportion_fourthZero() throws Exception {
-        assertEquals("Validação com 0 no 4° campo", false, proportionActivity.checkProportion(1,2,3,0));
+        assertEquals("Validação com 0 no 4° campo", false, proportionActivity.checkProportion(1f,2f,3f,0f));
     }
 }
