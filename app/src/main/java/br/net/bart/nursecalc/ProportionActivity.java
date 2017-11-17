@@ -116,28 +116,6 @@ public class ProportionActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public void calculate(View view){
         validateOnAir=true;
 
@@ -159,7 +137,7 @@ public class ProportionActivity extends AppCompatActivity {
         int count=0;
 
         try {
-            val1 = Float.parseFloat(((EditText) findViewById(R.id.ETProp1)).getText().toString());
+            val1 = Float.parseFloat(campo1.getText().toString());
         } catch (NullPointerException ex) {
             Log.e("PROPO", "Campos", ex);
             return;
@@ -169,7 +147,7 @@ public class ProportionActivity extends AppCompatActivity {
         }
 
         try {
-            val2 = Float.parseFloat(((EditText) findViewById(R.id.ETProp2)).getText().toString());
+            val2 = Float.parseFloat(campo2.getText().toString());
         } catch (NullPointerException ex) {
             Log.v("PROPO", "Campos", ex);
             return;
@@ -179,7 +157,7 @@ public class ProportionActivity extends AppCompatActivity {
         }
 
         try {
-            val3 = Float.parseFloat(((EditText) findViewById(R.id.ETProp3)).getText().toString());
+            val3 = Float.parseFloat(campo3.getText().toString());
         } catch (NullPointerException ex) {
             Log.v("PROPO", "Campos", ex);
             return;
@@ -189,7 +167,7 @@ public class ProportionActivity extends AppCompatActivity {
         }
 
         try {
-            val4 = Float.parseFloat(((EditText) findViewById(R.id.ETProp4)).getText().toString());
+            val4 = Float.parseFloat(campo4.getText().toString());
         } catch (NullPointerException ex) {
             Log.v("PROPO", "Campos", ex);
             return;
@@ -218,13 +196,13 @@ public class ProportionActivity extends AppCompatActivity {
         }else{
             //calcula a proporção
             if (et1Vazio){
-                setEditTextProportion(val4, val3, val2, (EditText) findViewById(R.id.ETProp1));
+                setEditTextProportion(val4, val3, val2, campo1);
             }else if (et2Vazio) {
-                setEditTextProportion(val3,val4,val1, (EditText) findViewById(R.id.ETProp2));
+                setEditTextProportion(val3,val4,val1, campo2);
             } else if (et3Vazio) {
-                setEditTextProportion(val2,val1,val4, (EditText) findViewById(R.id.ETProp3));
+                setEditTextProportion(val2,val1,val4, campo3);
             }else if (et4Vazio) {
-                setEditTextProportion(val1,val2,val3, (EditText) findViewById(R.id.ETProp4));
+                setEditTextProportion(val1,val2,val3, campo4);
             }
         }
 
@@ -234,7 +212,10 @@ public class ProportionActivity extends AppCompatActivity {
         if(val1==0 || val2==0 || val3==0 ||val4==0)
             return false;
 
-        return (val1/val2 == val3/val4);
+        float equation1=((int)(val1/val2)*100)/100; //round 2 decimals
+        float equation2=((int)(val3/val4)*100)/100; //round 2 decimals
+
+        return (equation1 == equation2);
     }
 
     protected void setEditTextProportion(float v1, float v2, float v3, EditText editText) {
