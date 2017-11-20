@@ -9,7 +9,7 @@
     <Button
         android:id="@+id/ButtonProp"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/main_button_height"
         android:layout_margin="@dimen/my_margin_default"
 
         android:drawableTop="@mipmap/ic_compare"
@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/ButtonPreg"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/main_button_height"
         android:layout_margin="@dimen/my_margin_default"
         android:layout_marginStart="@dimen/my_margin_half"
         android:layout_marginLeft="@dimen/my_margin_half"
