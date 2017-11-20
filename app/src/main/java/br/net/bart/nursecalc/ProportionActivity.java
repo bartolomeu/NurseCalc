@@ -212,8 +212,8 @@ public class ProportionActivity extends AppCompatActivity {
         if(val1==0 || val2==0 || val3==0 ||val4==0)
             return false;
 
-        float equation1=((int)(val1/val2)*100)/100; //round 2 decimals
-        float equation2=((int)(val3/val4)*100)/100; //round 2 decimals
+        float equation1 = Math.round(val1 / val2 * 10000f) / 10000f ; //round 4 decimals
+        float equation2 = Math.round(val3 / val4 * 10000f) / 10000f; //round 4 decimals
 
         return (equation1 == equation2);
     }
@@ -228,7 +228,7 @@ public class ProportionActivity extends AppCompatActivity {
     }
 
     protected void clearErrorFields() {
-        ((TextView) findViewById(R.id.TVErrorMessage)).setVisibility(View.INVISIBLE);
+        findViewById(R.id.TVErrorMessage).setVisibility(View.INVISIBLE);
         ((TextInputLayout) findViewById(R.id.TIL1)).setError(null);
         ((TextInputLayout) findViewById(R.id.TIL2)).setError(null);
         ((TextInputLayout) findViewById(R.id.TIL3)).setError(null);
